@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Simples</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #25091c;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+
+      .titulo {
+        text-align: center;
+      }
+      .menu-icon {
+        cursor: pointer;
+      }
+      .sidebar {
+        width: 250px;
+        height: 100%;
+        background-color: #444;
+        color: white;
+        position: fixed;
+        left: -250px;
+        transition: left 0.3s ease;
+        padding: 20px;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group input {
+        width: 100%;
+        padding: 10px;
+        margin-right: 6px;
+        border: none;
+        border-radius: 5px;
+      }
+      .submit-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu-icon" onclick="toggleSidebar()">☰ Menu</div>
+      <h1 class="titulo">Buscador de serviços medicinais</h1>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <h2>Cadastro</h2>
+      <div class="form-group">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" placeholder="Digite seu usuário" />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" placeholder="Digite sua senha" />
+      </div>
+      <button class="submit-button" onclick="cadastrar()">Cadastrar</button>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("open");
+      }
+
+      function cadastrar() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        alert(`Usuário: ${username}\nSenha: ${password}`);
+        // Aqui você pode adicionar lógica para enviar os dados
+      }
+    </script>
+  </body>
+</html>
