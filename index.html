@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buscador de Serviços Medicinais</title>
+    <title>Buscador de Serviços Clínicos</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -45,6 +45,17 @@
 
       .sidebar.open {
         left: 0;
+      }
+
+      .close-button {
+        background-color: #ff5555;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
       }
 
       .form-group {
@@ -128,10 +139,11 @@
   <body>
     <header>
       <div class="menu-icon" onclick="toggleSidebar()">☰ Menu</div>
-      <h1 class="titulo">Buscador de Serviços Medicinais</h1>
+      <h1 class="titulo">Buscador de Serviços Clínicos</h1>
     </header>
 
     <div class="sidebar" id="sidebar">
+      <button class="close-button" onclick="toggleSidebar()">Fechar</button>
       <h2>Cadastro</h2>
       <div class="form-group">
         <label for="username">Usuário:</label>
