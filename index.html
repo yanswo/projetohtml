@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Serviços Clínicos</title>
+    <link rel="stylesheet" href="landing-styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Encontre Serviços Clínicos Perto de Você</h1>
+        <p>
+          Encontre os melhores serviços de saúde, como odontologia, psicologia e
+          dermatologia, de maneira rápida e fácil.
+        </p>
+        <a href="#" class="cta-button" id="botao">Comece a Buscar</a>
+      </div>
+    </header>
+
+    <div class="loader"></div>
+
+    <script>
+      const botao = document.getElementById("botao");
+      const loader = document.querySelector(".loader");
+
+      botao.addEventListener("click", function () {
+        loader.style.display = "block";
+
+        setTimeout(function () {
+          document.body.classList.add("fade");
+          setTimeout(function () {
+            window.location.href = "/routes/bsc.html";
+          }, 1000);
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

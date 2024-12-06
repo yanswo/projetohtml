@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Serviços Clínicos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="conteudo" class="conteudo">
+      <header>
+        <div class="logo">
+          <img src="/img/Logo.png" />
+          <div class="typed-text-container">
+            <span class="typed-text"
+              >Bem-vindo ao Buscador de Serviços Clínicos</span
+            >
+          </div>
+        </div>
+
+        <nav>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">Sobre</a>
+          <a href="#team" class="nav-link">Integrantes</a>
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search-input-header"
+              class="search-input"
+              placeholder="Pesquise por um serviço..."
+            />
+            <button id="search-button-header" class="search-button">
+              Buscar
+            </button>
+          </div>
+
+          <button id="menu-button" class="menu-button">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+          </button>
+        </nav>
+      </header>
+
+      <div class="auth-panel" id="authPanel">
+        <div class="auth-content">
+          <button class="auth-button" onclick="showLogin()">Login</button>
+          <button class="auth-button" onclick="showCadastro()">
+            Cadastrar
+          </button>
+        </div>
+        <div class="form-container" id="formContainer">
+          <div id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <input type="email" id="email-login" placeholder="E-mail" />
+            <input type="password" id="senha-login" placeholder="Senha" />
+            <button onclick="loginUsuario()">Entrar</button>
+          </div>
+
+          <div id="cadastroForm" class="auth-form">
+            <h2>Cadastrar</h2>
+            <input type="text" id="nome" placeholder="Nome" />
+            <input type="email" id="email" placeholder="E-mail" />
+            <input type="password" id="senha" placeholder="Senha" />
+            <button onclick="cadastrarUsuario()">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2 id="modal-title"></h2>
+          <div id="modal-content"></div>
+          <button id="btn-close-modal" class="btn-close-modal">Fechar</button>
+        </div>
+      </div>
+
+      <div id="modal-integrantes" class="modal hidden">
+        <div class="modal-content animated-modal">
+          <h2>Integrantes do Grupo</h2>
+          <ul>
+            <li>Yan Lucas</li>
+            <li>Alex Vinicius</li>
+            <li>Karine Evelyn</li>
+            <li>Erick</li>
+          </ul>
+          <button id="btn-close-integrantes" class="btn-close-modal">
+            Fechar
+          </button>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <main id="resultados"></main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
